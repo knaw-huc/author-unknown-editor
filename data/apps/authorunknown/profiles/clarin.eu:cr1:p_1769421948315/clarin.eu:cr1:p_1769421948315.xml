@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2"
+    xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1769421948315</ID>
+        <Name>AuthorUnknown</Name>
+        <Description>CMDI profile for the NWO Author Unknown project, which studies anonymity patterns in medieval manuscripts.</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="AuthorUnknown" ConceptLink="http://www.wikidata.org/entity/Q87167"
+        CardinalityMin="1" CardinalityMax="1">
+        <Component name="Title" CardinalityMin="1" CardinalityMax="1">
+            <Element name="Status" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"
+                cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+        </Component>
+    </Component>
+</ComponentSpec>
