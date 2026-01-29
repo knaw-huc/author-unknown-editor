@@ -1,21 +1,15 @@
-
 services:
-  econew:
+  authorunknown:
     image: ghcr.io/knaw-huc/service-huc-editor:2.0-rc9
     restart: unless-stopped
     environment:
-      - BASE_URL=https://econew.sd.di.huc.knaw.nl
+      - BASE_URL=https://author-unknown.tt.di.huc.knaw.nl
     volumes:
-      - ./data/products/ecodices:/home/huc/huc-editor-service/data/ecodices
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.services.econew.loadbalancer.server.port=1210"
-      - "traefik.http.routers.econew.entrypoints=http"
-      - "traefik.http.routers.econew.rule=Host(`econew.sd.di.huc.knaw.nl`)"
+      - ./data:/home/huc/huc-editor-service/data
     networks:
-      - traefik-public
-
+      - nginxproxynetwork
 
 networks:
-  traefik-public:
-    external: true
+  nginxproxynetwork:
+    external:
+      name: nginxproxynetwork
