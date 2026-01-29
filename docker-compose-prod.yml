@@ -1,3 +1,5 @@
+version: "3.5"
+
 services:
   authorunknown:
     image: ghcr.io/knaw-huc/service-huc-editor:2.0-rc9
