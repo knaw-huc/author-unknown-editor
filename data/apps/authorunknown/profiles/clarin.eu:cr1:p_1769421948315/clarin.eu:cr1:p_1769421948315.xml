@@ -10,9 +10,334 @@
     </Header>
     <Component name="AuthorUnknown" ConceptLink="http://www.wikidata.org/entity/Q87167"
         CardinalityMin="1" CardinalityMax="1">
-        <Component name="Title" CardinalityMin="1" CardinalityMax="1">
-            <Element name="Status" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"
-                cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+        <Component name="generalInfo" CardinalityMin="1" CardinalityMax="1">
+            <Element name="Status" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
+                xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>Select the status of this record.</Documentation>
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>To do</item>
+                            <item>In progress</item>
+                            <item>Done</item>
+                            <item>Checked</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"
+                xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+            <Element name="digitalisatLink" ValueScheme="string" CardinalityMin="0"
+                CardinalityMax="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+            <Element name="linkIiifManifest" ValueScheme="string" CardinalityMin="0"
+                CardinalityMax="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+            <Element name="creator" ValueScheme="string" CardinalityMin="1"
+                CardinalityMax="unbounded" xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+            <Element name="modeOfConsultation" cue:class="skosType" CardinalityMin="1"
+                CardinalityMax="1"
+                xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>Physical manuscript</item>
+                            <item>Digital facsimile</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+        </Component>
+        <Component name="Part" CardinalityMin="1" CardinalityMax="1">
+            <Component name="msIdentifier" CardinalityMin="1" CardinalityMax="1">
+                <Element name="settlement" cue:class="skosType" CardinalityMin="1"
+                    CardinalityMax="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Cologne</item>
+                                <item>Würzburg</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="repository" cue:class="skosType" CardinalityMin="1"
+                    CardinalityMax="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Erzbischöfliche Diözesan- und Dombibliothek</item>
+                                <item>Universitätsbibliothek Würzburg</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="shelfmark" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" />
+                <Element name="formerShelfmark" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+            </Component>
+            <Component name="history" CardinalityMin="1" CardinalityMax="1">
+                <Element name="origCollection" cue:class="skosType" CardinalityMin="1"
+                    CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Monastic library of St. Benoit-sur-
+Loire in Fleury</item>
+                                <item>St. Kilian cathedral library in Wurzburg</item>
+                                <item>Library of St. Peter’s abbey in Gent</item>
+                                <item>Dombibliothek in Cologne</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="productionDate" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1" />
+                <Element name="notBefore" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+                <Element name="notAfter" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+                <Element name="normalisedDate" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1" />
+                <Element name="century" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="unbounded" />
+                <Element name="notes" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+                <Component name="placeOfProduction" CardinalityMin="1" CardinalityMax="unbounded">
+                    <Element name="origPlace" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                    <Element name="certaintyPlace" cue:class="skosType" CardinalityMin="1"
+                        CardinalityMax="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>Yes</item>
+                                    <item>No</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                </Component>
+            </Component>
+            <Component name="physicalDesc" CardinalityMin="1" CardinalityMax="1">
+                <Element name="numberOfFolia" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1" />
+                <Element name="height" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1">
+                    <Documentation>This concerns the height of the book block.</Documentation>
+                </Element>
+                <Element name="width" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1">
+                    <Documentation>This concerns the width of the book block.</Documentation>
+                </Element>
+                <Element name="script" cue:class="skosType" CardinalityMin="0"
+                    CardinalityMax="1"
+                    cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <Documentation>This concerns the script of the main body of text. Select the value from the list. This vocabulary is also available in SKOSMOS: https://skosmos.sd.di.huc.knaw.nl/ecodices-hand/en/</Documentation>
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Rustic capitals</item>
+                                <item>Square capitals</item>
+                                <item>Precaroline minuscule</item>
+                                <item>Uncial</item>
+                                <item>Half uncial</item>
+                                <item>Carolingian minuscule</item>
+                                <item>Visigothic minuscule</item>
+                                <item>Insular minuscule</item>
+                                <item>Beneventan minuscule</item>
+                                <item>Praegothic</item>
+                                <item>Gothic textualis</item>
+                                <item>Other</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="notes" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+            </Component>
+            <Component name="bibliography" CardinalityMin="0" CardinalityMax="1">
+                <Element name="link" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="unbounded" />
+            </Component>
+            <Component name="item" CardinalityMin="0" CardinalityMax="unbounded">
+                <Element name="title" ValueScheme="string" CardinalityMin="1"
+                    CardinalityMax="1" />
+                <Element name="scribalContext" cue:class="skosType"
+                    CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Original scribe</item>
+                                <item>Later hand</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="scribalContextDate" cue:class="skosType"
+                    CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>(Near-)contemporary</item>
+                                <item>Medieval</item>
+                                <item>Post-Medieval</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="locusFrom" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" />
+                <Element name="locusTo" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" />
+                <Element name="excerpt" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Yes</item>
+                                <item>No</item>
+                                <item>NaN</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="diagram" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Yes</item>
+                                <item>No</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="table" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Yes</item>
+                                <item>No</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="list" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Yes</item>
+                                <item>No</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="openingRubric" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+                <Element name="incipit" ValueScheme="string" CardinalityMin="1" CardinalityMax="1">
+                    <Documentation>The 'incipit' is the first words of the text.</Documentation>
+                </Element>
+                <Element name="closingRubric" ValueScheme="string" CardinalityMin="0"
+                    CardinalityMax="1" />
+                <Element name="explicit" ValueScheme="string" CardinalityMin="1" CardinalityMax="1">
+                    <Documentation>The 'explicit' is the last words of the text.</Documentation>
+                </Element>
+                <Component name="author" CardinalityMin="0" CardinalityMax="unbounded">
+                    <Element name="author" ValueScheme="string" CardinalityMin="0"
+                        CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+                    <Element name="authorStatus" cue:class="skosType" CardinalityMin="1"
+                        CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>Named in manuscript</item>
+                                    <item>Attributed in catalogue</item>
+                                    <item>Anonymous</item>
+                                    <item>Anonymous (NaN)</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="authorQualification" cue:class="skosType"
+                        CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <Documentation>Accepted attribution is geen twijfel.</Documentation>
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>Accepted attribution</item>
+                                    <item>Traditional attribution</item>
+                                    <item>Pseudonymous</item>
+                                    <item>Dubious</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="whereMentionedInManuscript" cue:class="skosType"
+                        CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>Opening rubric</item>
+                                    <item>Incipit</item>
+                                    <item>Closing rubric</item>
+                                    <item>Explicit</item>
+                                    <item>Table of contents</item>
+                                    <item>Body of text</item>
+                                    <item>Margin</item>
+                                    <item>Title page</item>
+                                    <item>Colophon</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="scribalContext" cue:class="skosType"
+                        CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>Original scribe</item>
+                                    <item>Later hand</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="scribalContextDate" cue:class="skosType"
+                        CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>(Near-)contemporary</item>
+                                    <item>Medieval</item>
+                                    <item>Post-Medieval</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="note" ValueScheme="string" CardinalityMin="0"
+                        CardinalityMax="1" />
+                </Component>
+                <Component name="typeOfText" CardinalityMin="0" CardinalityMax="unbounded">
+                    <Element name="typeOfText" cue:class="skosType" ValueScheme="string"
+                        CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <Documentation>Start typing and select the value. Or click on the hamburger menu. Or for a full list visit the link (in hierarchy view): https://skosmos.sd.di.huc.knaw.nl/ecodices-genre/en/</Documentation>
+                    </Element>
+                </Component>
+                <Component name="itemNotes" CardinalityMin="1" CardinalityMax="1">
+                    <Element name="note" ValueScheme="string" CardinalityMin="0"
+                        CardinalityMax="1" cue:DisplayPriority="1"
+                        xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
+                </Component>
+            </Component>
         </Component>
     </Component>
 </ComponentSpec>
