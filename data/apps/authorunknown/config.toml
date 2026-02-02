@@ -13,12 +13,32 @@ write="users"
 [app.prof.authorunknown]
 prof="clarin.eu:cr1:p_1769421948315"
 title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+label_en="part"
+label_plural_en="parts"
 
-[app.prof.authorunknown.list]
-        
-[app.prof.authorunknown.list.first]
-xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-label="First"
-sort="true"# or "false"
-filter="true"# or "'select'"
-                
+[app.prof.authorunknown.list.nr]
+xpath="replace(base-uri(),'.*/record-([\\d]+).xml','$1')"
+label="Nr"
+sort="true"
+filter="true"
+
+[app.prof.authorunknown.list.status]
+xpath="(//*:generalInfo/*:Status)[1]"
+label="Status"
+sort="true"
+filter="'select'"
+
+[app.prof.authorunknown.list.creator]
+xpath="string(//*:generalInfo/*:creator[1])"
+label="Creator"
+sort="true"
+filter="true"
+
+[app.prof.authorunknown.list.title]
+xpath="string((//*:generalInfo/*:title)[1])"
+label="Title"
+sort="true"
+filter="true"
+
+[app.html]
+style="authorunknown.css"
