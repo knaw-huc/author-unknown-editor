@@ -11,8 +11,24 @@
     </Header>
     <Component name="AuthorUnknown">
         <Component name="Title">
-            <Element name="Status"><!--cues-->
+            <Element name="Status" cue:inputHeight="20" cue:inputWidth="60"><!--cues-->
             </Element>
+        </Component>
+        <Component name="Part">
+            <Component name="item">
+                <Element name="incipit">
+                    <clariah:explanation src="documentation" />
+                </Element>
+                <Element name="explicit">
+                    <clariah:explanation src="documentation" />
+                </Element>
+                <Component name="typeOfText">
+                    <Element name="typeOfText">
+                        <clariah:autoCompleteURI>/proxy/skosmos/sd/ecodices-genre</clariah:autoCompleteURI>
+                        <clariah:explanation src="documentation" />
+                    </Element>
+                </Component>
+            </Component>
         </Component>
     </Component>
 </ComponentSpec>
