@@ -250,6 +250,26 @@ Loire in Fleury</item>
                 <Element name="explicit" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
                     <Documentation>The 'explicit' is the last words of the text.</Documentation>
                 </Element>
+                <Element name="itemNumber" cue:class="skosType" CardinalityMin="1"
+                    CardinalityMax="1"
+                    xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>1</item>
+                                <item>2</item>
+                                <item>3</item>
+                                <item>4</item>
+                                <item>5</item>
+                                <item>6</item>
+                                <item>7</item>
+                                <item>8</item>
+                                <item>9</item>
+                                <item>10</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
                 <Component name="author" CardinalityMin="0" CardinalityMax="unbounded">
                     <Element name="author" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" cue:DisplayPriority="1"
