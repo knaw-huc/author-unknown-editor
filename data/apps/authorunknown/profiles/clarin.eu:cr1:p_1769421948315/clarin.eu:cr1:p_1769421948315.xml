@@ -242,12 +242,12 @@ Loire in Fleury</item>
                 </Element>
                 <Element name="openingRubric" ValueScheme="string" CardinalityMin="0"
                     CardinalityMax="1" />
-                <Element name="incipit" ValueScheme="string" CardinalityMin="1" CardinalityMax="1">
+                <Element name="incipit" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
                     <Documentation>The 'incipit' is the first words of the text.</Documentation>
                 </Element>
                 <Element name="closingRubric" ValueScheme="string" CardinalityMin="0"
                     CardinalityMax="1" />
-                <Element name="explicit" ValueScheme="string" CardinalityMin="1" CardinalityMax="1">
+                <Element name="explicit" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
                     <Documentation>The 'explicit' is the last words of the text.</Documentation>
                 </Element>
                 <Component name="author" CardinalityMin="0" CardinalityMax="unbounded">
