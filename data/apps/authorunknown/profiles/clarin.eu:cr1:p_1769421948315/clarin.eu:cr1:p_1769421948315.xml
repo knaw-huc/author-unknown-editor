@@ -90,18 +90,22 @@ Loire in Fleury</item>
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
-                <Element name="productionDate" ValueScheme="string" CardinalityMin="1"
-                    CardinalityMax="1" />
-                <Element name="notBefore" ValueScheme="string" CardinalityMin="0"
-                    CardinalityMax="1" />
-                <Element name="notAfter" ValueScheme="string" CardinalityMin="0"
-                    CardinalityMax="1" />
-                <Element name="normalisedDate" ValueScheme="string" CardinalityMin="1"
-                    CardinalityMax="1" />
-                <Element name="century" ValueScheme="string" CardinalityMin="1"
-                    CardinalityMax="unbounded" />
                 <Element name="notes" ValueScheme="string" CardinalityMin="0"
                     CardinalityMax="1" />
+                <Component name="dateOfProduction" CardinalityMin="1" CardinalityMax="unbounded">
+                    <Element name="productionDate" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                    <Element name="notBefore" ValueScheme="string" CardinalityMin="0"
+                        CardinalityMax="1" />
+                    <Element name="notAfter" ValueScheme="string" CardinalityMin="0"
+                        CardinalityMax="1" />
+                    <Element name="normalisedDate" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                    <Element name="century" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="unbounded" />
+                    <Element name="datingSource" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                </Component>
                 <Component name="placeOfProduction" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="origPlace" ValueScheme="string" CardinalityMin="1"
                         CardinalityMax="1" />
