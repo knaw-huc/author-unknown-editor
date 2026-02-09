@@ -284,7 +284,7 @@ Loire in Fleury</item>
                         </ValueScheme>
                     </Element>
                     <Element name="whereMentionedInManuscript" cue:class="skosType"
-                        CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1"
+                        CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1"
                         xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                         <ValueScheme>
                             <Vocabulary>
