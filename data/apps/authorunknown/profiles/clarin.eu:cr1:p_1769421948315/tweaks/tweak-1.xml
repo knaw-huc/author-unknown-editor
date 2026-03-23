@@ -10,23 +10,19 @@
         <Status>development</Status>
     </Header>
     <Component name="AuthorUnknown">
-        <Component name="Title">
-            <Element name="Status" cue:inputHeight="20" cue:inputWidth="60"><!--cues-->
-            </Element>
-        </Component>
         <Component name="Part">
+            <Component name="history">
+                <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
+            </Component>
+            <Component name="physicalDesc">
+                <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
+            </Component>
             <Component name="item">
-                <Element name="incipit">
-                    <clariah:explanation src="documentation" />
-                </Element>
-                <Element name="explicit">
-                    <clariah:explanation src="documentation" />
-                </Element>
-                <Component name="typeOfText">
-                    <Element name="typeOfText">
-                        <clariah:autoCompleteURI>/proxy/skosmos/sd/ecodices-genre</clariah:autoCompleteURI>
-                        <clariah:explanation src="documentation" />
-                    </Element>
+                <Component name="author">
+                    <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
+                </Component>
+                <Component name="itemNotes">
+                    <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
                 </Component>
             </Component>
         </Component>
