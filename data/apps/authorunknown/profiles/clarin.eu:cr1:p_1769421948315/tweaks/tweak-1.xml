@@ -18,6 +18,7 @@
                 <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
             </Component>
             <Component name="item">
+                <Element name="title" cue:inputHeight="20" cue:inputWidth="44"></Element>
                 <Component name="author">
                     <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
                 </Component>
