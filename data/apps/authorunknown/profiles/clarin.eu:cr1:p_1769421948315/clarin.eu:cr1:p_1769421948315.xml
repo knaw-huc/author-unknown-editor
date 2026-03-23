@@ -352,7 +352,7 @@ Loire in Fleury</item>
                             </Vocabulary>
                         </ValueScheme>
                     </Element>
-                    <Element name="note" ValueScheme="string" CardinalityMin="0"
+                    <Element name="notes" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" />
                 </Component>
                 <Component name="typeOfText" CardinalityMin="0" CardinalityMax="unbounded">
@@ -363,7 +363,7 @@ Loire in Fleury</item>
                     </Element>
                 </Component>
                 <Component name="itemNotes" CardinalityMin="1" CardinalityMax="1">
-                    <Element name="note" ValueScheme="string" CardinalityMin="0"
+                    <Element name="notes" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" cue:DisplayPriority="1"
                         xmlns:cue="http://www.clarin.eu/cmd/cues/1" />
                 </Component>
