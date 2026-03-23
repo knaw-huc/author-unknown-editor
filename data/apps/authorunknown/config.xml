@@ -14,15 +14,38 @@
       <authorunknown>
         <prof>clarin.eu:cr1:p_1769421948315</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <label_en>part</label_en>
+        <label_plural_en>parts</label_plural_en>
         <list>
-          <first>
-            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
-            <label>First</label>
+          <nr>
+            <xpath>replace(base-uri(),'.*/record-([\d]+).xml','$1')</xpath>
+            <label>Nr</label>
             <sort>true</sort>
             <filter>true</filter>
-          </first>
+          </nr>
+          <status>
+            <xpath>(//*:generalInfo/*:Status)[1]</xpath>
+            <label>Status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+          <creator>
+            <xpath>string(//*:generalInfo/*:creator[1])</xpath>
+            <label>Creator</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </creator>
+          <title>
+            <xpath>string((//*:generalInfo/*:title)[1])</xpath>
+            <label>Title</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </title>
         </list>
       </authorunknown>
     </prof>
+    <html>
+      <style>authorunknown.css</style>
+    </html>
   </app>
 </config>
