@@ -193,8 +193,6 @@ Loire in Fleury</item>
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
-                <Element name="locusFrom" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" />
-                <Element name="locusTo" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" />
                 <Element name="excerpt" cue:class="skosType" CardinalityMin="1" CardinalityMax="1"
                     xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                     <ValueScheme>
@@ -270,6 +268,12 @@ Loire in Fleury</item>
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
+                <Component name="locus" CardinalityMin="0" CardinalityMax="unbounded">
+                    <Element name="locusFrom" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                    <Element name="locusTo" ValueScheme="string" CardinalityMin="1"
+                        CardinalityMax="1" />
+                </Component>
                 <Component name="author" CardinalityMin="0" CardinalityMax="unbounded">
                     <Element name="author" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" cue:DisplayPriority="1"
