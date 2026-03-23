@@ -280,7 +280,8 @@ Loire in Fleury</item>
                         <ValueScheme>
                             <Vocabulary>
                                 <enumeration>
-                                    <item>Named in manuscript</item>
+                                    <item>Named in manuscript (direct)</item>
+                                    <item>Named in manuscript (indirect)</item>
                                     <item>Attributed in catalogue</item>
                                     <item>Anonymous</item>
                                     <item>Anonymous (NaN)</item>
