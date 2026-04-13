@@ -25,6 +25,12 @@
                 <Component name="itemNotes">
                     <Element name="notes" cue:inputHeight="20" cue:inputWidth="44"></Element>
                 </Component>
+                <Component name="typeOfText">
+                    <Element name="typeOfText">
+                        <clariah:autoCompleteURI>/proxy/skosmos/sd/ecodices-genre</clariah:autoCompleteURI>
+                        <clariah:explanation src="documentation" />
+                    </Element>
+                </Component>
             </Component>
         </Component>
     </Component>
