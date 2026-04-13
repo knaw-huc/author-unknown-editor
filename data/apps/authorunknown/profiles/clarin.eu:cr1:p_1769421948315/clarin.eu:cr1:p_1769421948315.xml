@@ -55,6 +55,7 @@
                             <enumeration>
                                 <item>Cologne</item>
                                 <item>Würzburg</item>
+                                <item>Oxford</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
@@ -66,6 +67,7 @@
                             <enumeration>
                                 <item>Erzbischöfliche Diözesan- und Dombibliothek</item>
                                 <item>Universitätsbibliothek Würzburg</item>
+                                <item>Bodleian Library</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
