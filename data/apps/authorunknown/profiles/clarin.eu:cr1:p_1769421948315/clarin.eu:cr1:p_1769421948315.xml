@@ -53,9 +53,18 @@
                     <ValueScheme>
                         <Vocabulary>
                             <enumeration>
+                                <item>Brussels</item>
                                 <item>Cologne</item>
-                                <item>Würzburg</item>
+                                <item>Ghent</item>
+                                <item>Leiden</item>
+                                <item>London</item>
+                                <item>Madrid</item>
+                                <item>Orléans</item>
                                 <item>Oxford</item>
+                                <item>Paris</item>
+                                <item>Stockholm</item>
+                                <item>Vatican City</item>
+                                <item>Würzburg</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
@@ -65,9 +74,18 @@
                     <ValueScheme>
                         <Vocabulary>
                             <enumeration>
-                                <item>Erzbischöfliche Diözesan- und Dombibliothek</item>
-                                <item>Universitätsbibliothek Würzburg</item>
+                                <item>Biblioteca Apostolica Vaticana</item>
+                                <item>Bibliothèque nationale de France</item>
                                 <item>Bodleian Library</item>
+                                <item>British Library</item>
+                                <item>Erzbischöfliche Diözesan- und Dombibliothek</item>
+                                <item>Ghent University Library</item>
+                                <item>Leiden University Library</item>
+                                <item>Mediathèque centre-ville</item>
+                                <item>National Library of Sweden (Kungliga biblioteket)</item>
+                                <item>Real Biblioteca del Monasterio de El Escorial</item>
+                                <item>Royal Library of Belgium</item>
+                                <item>Universitätsbibliothek Würzburg</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
