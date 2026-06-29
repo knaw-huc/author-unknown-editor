@@ -119,7 +119,7 @@ Loire in Fleury</item>
                         CardinalityMax="1" />
                     <Element name="notAfter" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" />
-                    <Element name="normalisedDate" ValueScheme="string" CardinalityMin="1"
+                    <Element name="normalisedDate" ValueScheme="string" CardinalityMin="0"
                         CardinalityMax="1" />
                     <Element name="century" ValueScheme="string" CardinalityMin="1"
                         CardinalityMax="unbounded" />
